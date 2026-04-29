@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — hailO by Transtrade</title>
+  <style>
+    :root {
+      --navy:#1D2E4A;--navy-mid:#253a5e;--yellow:#FFD760;--orange:#FF7D4F;
+      --gradient:linear-gradient(135deg,#FFD760 0%,#FF7D4F 100%);
+      --dark:#3a3a3a;--dark-mid:#4d4d4d;--white:#ffffff;--off-white:#F8F9FC;
+      --text:#1a1a2e;--text-muted:#5a6480;--text-light:#8b95b0;
+      --border:rgba(29,46,74,0.1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,'SF Pro Display',BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+ 
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s}
+    .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;text-decoration:none}
+    .logo-img{height:52px;width:auto;object-fit:contain}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+    .nav-links a{color:var(--text-muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;border-radius:100px;transition:all 0.2s;cursor:pointer}
+    .nav-links a:hover{color:var(--navy);background:var(--off-white)}
+    .nav-cta{background:var(--navy)!important;color:var(--white)!important}
+    .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(29,46,74,0.25)!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all 0.3s}
+    .mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);padding:16px 5%;flex-direction:column;gap:6px;z-index:199}
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{color:var(--text-muted);text-decoration:none;font-size:16px;font-weight:600;padding:12px 16px;border-radius:12px;cursor:pointer;transition:all 0.2s}
+    .mobile-nav a:hover{background:var(--off-white);color:var(--navy)}
+ 
+    /* FOOTER */
+    footer{background:var(--navy);padding:80px 8% 40px}
+    .footer-top{display:flex;flex-direction:row;align-items:flex-start;justify-content:space-between;gap:40px;max-width:1300px;margin:0 auto 60px}
+    .ft-brand{flex:2;min-width:0}
+    .ft-col{flex:1;min-width:0}
+    .ft-brand p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8;font-weight:300;margin:16px 0 24px;max-width:300px}
+    .ft-col h5{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:20px}
+    .ft-col a{display:block;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:12px;cursor:pointer;transition:color 0.2s;font-weight:500}
+    .ft-col a:hover{color:var(--yellow)}
+    .footer-bottom{max-width:1300px;margin:0 auto;padding-top:30px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .footer-bottom p{font-size:13px;color:rgba(255,255,255,0.28);font-weight:400}
+    .footer-bottom p span{color:var(--orange)}
+    .socials{display:flex;gap:8px}
+    .soc-btn{width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;font-size:15px;cursor:pointer;transition:all 0.2s}
+    .soc-btn:hover{background:rgba(255,255,255,0.1)}
+    .logo-pill{background:var(--navy);color:var(--yellow);font-size:17px;font-weight:800;padding:6px 14px;border-radius:100px;letter-spacing:-0.5px;line-height:1;display:flex;align-items:center;gap:2px}
+    .logo-pill .logo-o{color:var(--orange)}
+ 
+    /* PAGE */
+    .page-wrap{padding-top:68px;min-height:100vh;background:var(--off-white)}
+    .pol-hero{background:var(--navy);padding:80px 8% 70px;position:relative;overflow:hidden}
+    .pol-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 80% 50%,rgba(255,215,96,0.08) 0%,transparent 60%)}
+    .pol-hero-inner{position:relative;z-index:2;max-width:720px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,215,96,0.12);border:1px solid rgba(255,215,96,0.28);border-radius:100px;padding:7px 16px;font-size:11px;font-weight:700;color:var(--yellow);letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
+    .badge-dot{width:6px;height:6px;background:var(--orange);border-radius:50%;display:inline-block}
+    .pol-hero h1{font-size:clamp(36px,5vw,60px);font-weight:800;color:white;letter-spacing:-2px;line-height:1;margin-bottom:16px}
+    .pol-hero p{color:rgba(255,255,255,0.55);font-size:16px;font-weight:300}
+    .content{max-width:860px;margin:0 auto;padding:60px 5% 100px}
+    .card{background:white;border-radius:20px;padding:52px;border:1px solid var(--border);box-shadow:0 4px 40px rgba(29,46,74,0.06)}
+    .card h2{font-size:18px;font-weight:800;color:var(--navy);margin:40px 0 12px;padding-left:14px;border-left:3px solid var(--orange)}
+    .card h2:first-of-type{margin-top:0}
+    .card p{font-size:15px;color:var(--dark-mid);line-height:1.85;margin-bottom:14px}
+    .card ul{padding-left:22px;margin-bottom:16px}
+    .card li{font-size:15px;color:var(--dark-mid);line-height:1.7;margin-bottom:6px}
+    .card a{color:var(--orange);text-decoration:none;font-weight:600}
+    .card a:hover{text-decoration:underline}
+    .card strong{color:var(--navy);font-weight:700}
+    .contact-box{background:var(--off-white);border:1px solid var(--border);border-radius:16px;padding:28px 32px;margin-top:12px;font-size:15px;line-height:2;color:var(--dark-mid)}
+    .updated{font-size:13px;color:var(--text-muted);margin-top:40px;padding-top:24px;border-top:1px solid var(--border)}
+ 
+    @media(max-width:1024px){.footer-top{flex-wrap:wrap;gap:40px}.ft-brand{flex:1 1 100%}.ft-col{flex:1 1 calc(25% - 30px);min-width:140px}}
+    @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}footer{padding:60px 5% 32px}.footer-top{flex-direction:column;gap:32px}.ft-brand,.ft-col{flex:1 1 100%}.footer-bottom{flex-direction:column;align-items:center;text-align:center;gap:8px}}
+    @media(max-width:600px){.card{padding:28px 24px}.pol-hero{padding:60px 5% 50px}}
+  </style>
+</head>
+<body>
+ 
+<nav id="mainNav">
+  <a class="nav-logo" href="index.html"><img src="logo.png" alt="hailO" class="logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">About</a></li>
+    <li><a href="index.html">Services</a></li>
+    <li><a href="index.html">FAQ</a></li>
+    <li><a href="index.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-nav" id="mobNav">
+  <a href="index.html">Home</a>
+  <a href="index.html">About</a>
+  <a href="index.html">Services</a>
+  <a href="index.html">FAQ</a>
+  <a href="index.html" style="color:var(--navy);font-weight:800">Contact Us</a>
+</div>
+ 
+<div class="page-wrap">
+  <div class="pol-hero">
+    <div class="pol-hero-inner">
+      <div class="badge"><span class="badge-dot"></span> Legal</div>
+      <h1>Privacy Policy</h1>
+      <p>How hailO collects, uses, and protects your personal information</p>
+    </div>
+  </div>
+ 
+  <div class="content">
+    <div class="card">
+      <p>This Privacy Policy explains how hailO collects, uses, and protects any information you provide while using our website or mobile application. This Policy is an electronic record in accordance with the <strong>Information Technology Act, 2000</strong> and applicable rules. Your privacy is important to <strong>S V SANGHVI TECNO PRIVATE LIMITED</strong> ("hailO"). By using our Services, you consent to the collection and use of your information as described here.</p>
+ 
+      <h2>What Information We Collect</h2>
+      <p>We may collect the following:</p>
+      <ul>
+        <li>Personal details such as name and job title</li>
+        <li>Contact details including email address and phone number</li>
+        <li>Demographic information such as address, postcode, preferences, and interests</li>
+        <li>Transaction details, billing information, invoices, and saved preferences</li>
+        <li>Information collected through surveys, feedback, or promotional activities</li>
+        <li>Device-related data such as app install/uninstall activity</li>
+      </ul>
+      <p>For <strong>Driver Partners</strong>, we may additionally collect: location data, profile photographs, government-issued identification (KYC), vehicle documents (registration, insurance, pollution certificate), bank account details, driving license, and fitness documentation. We may also conduct background verification checks through authorized third-party vendors.</p>
+ 
+      <h2>How We Use the Information</h2>
+      <ul>
+        <li>Maintaining internal records and improving our Services</li>
+        <li>Enabling transactions and fulfilling contractual obligations</li>
+        <li>Managing your account, usage, and processing payments</li>
+        <li>Responding to queries, feedback, and support requests</li>
+        <li>Sending important updates regarding Services</li>
+        <li>Tracking service requests and delivery status</li>
+        <li>Conducting research and analysis</li>
+        <li>Sending promotional communications where permitted — you may opt out at any time</li>
+      </ul>
+ 
+      <h2>Data Security</h2>
+      <p>We take appropriate security measures — physical, electronic, and managerial — to protect your information against unauthorized access, misuse, or disclosure, in line with applicable Indian laws.</p>
+ 
+      <h2>Information Sharing and Disclosure</h2>
+      <p>We may share your information with trusted third-party service providers under contractual obligations, government or law enforcement agencies when required by law, and entities assisting in service delivery, compliance, or fraud prevention. All disclosures are made in accordance with applicable legal requirements.</p>
+ 
+      <h2>Prohibited Use</h2>
+      <p>You agree not to upload or share any content that is defamatory, obscene, offensive, violates intellectual property rights, breaches any applicable law, misleads or impersonates another individual, threatens national security, or contains harmful software. hailO reserves the right to suspend or terminate access for violations.</p>
+ 
+      <h2>Withdrawal of Consent</h2>
+      <p>You may withdraw consent at any time. However, this may limit your ability to access certain Services.</p>
+ 
+      <h2>Cookies</h2>
+      <p>Cookies are small data files stored on your device to enhance user experience and analyze usage. You may accept or decline cookies through your browser settings.</p>
+ 
+      <h2>Third-Party Links</h2>
+      <p>Our platform may include links to external websites. We are not responsible for the privacy practices of such third-party platforms.</p>
+ 
+      <h2>Updates to This Policy</h2>
+      <p>hailO may update this Policy from time to time. Continued use of our Services constitutes acceptance of the revised Policy. Please review this page periodically.</p>
+ 
+      <h2>Contact Us &amp; Grievance Officer</h2>
+      <div class="contact-box">
+        <strong>S V SANGHVI TECNO PRIVATE LIMITED (hailO)</strong><br>
+        SH NO 1509 C WARD, LAXMIPURI, MUNISUVRAT PLAZA<br>
+        Kolhapur, Maharashtra – 416002<br>
+        📧 <a href="mailto:info@hailo.co.in">info@hailo.co.in</a><br>
+        ⏰ Monday to Saturday (10 AM to 7 PM)
+      </div>
+      <p class="updated">© 2025 S V Sanghvi Tecno Private Limited. All rights reserved.</p>
+    </div>
+  </div>
+</div>
+ 
+<footer>
+  <div class="footer-top">
+    <div class="ft-brand">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+        <div class="logo-pill"><img src="whitelogo.png" alt="" height="50px" width="120px"></div>
+        <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.3);letter-spacing:1.5px;text-transform:uppercase">by transtrade</span>
+      </div>
+      <p>Food, medicines, essentials, or parcels — hailO by Transtrade brings everything to your doorstep with care, convenience and complete peace of mind.</p>
+      <div class="socials">
+        <div class="soc-btn">📘</div><div class="soc-btn">📸</div><div class="soc-btn">🐦</div><div class="soc-btn">💼</div>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h5>Navigate</h5>
+      <a href="index.html">Home</a><a href="index.html">About Us</a><a href="index.html">Services</a><a href="index.html">FAQ</a><a href="index.html">Contact</a>
+    </div>
+    <div class="ft-col">
+      <h5>Services</h5>
+      <a href="index.html">Food Delivery</a><a href="index.html">Pharmacy Delivery</a><a href="index.html">Parcel Delivery</a><a href="index.html">Groceries</a><a href="index.html">Tempo Delivery</a>
+    </div>
+    <div class="ft-col">
+      <h5>Contact</h5>
+      <a href="mailto:support@hailoapp.com">support@hailoapp.com</a><a href="index.html">Send a Message</a><a href="index.html">Partnership Enquiry</a><a href="index.html">Become a Rider</a>
+    </div>
+    <div class="ft-col">
+      <h5>Policies</h5>
+      <a href="privacy-policy.html">Privacy Policy</a><a href="refund-policy.html">Refund Policy</a><a href="customer-policy.html">Customer Policy</a><a href="service-agreement.html">Service Agreement</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 hailO by Transtrade. All rights reserved. Made with <span>♥</span> and a lot of bike grease.</p>
+    <p>🛵 Currently delivering near you</p>
+  </div>
+</footer>
+ 
+<script>
+  function toggleMob(){document.getElementById('mobNav').classList.toggle('open')}
+  window.addEventListener('scroll',()=>{document.getElementById('mainNav').style.boxShadow=window.scrollY>10?'0 2px 30px rgba(29,46,74,0.08)':'none'})
+</script>
+</body>
+</html>

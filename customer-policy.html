@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Terms &amp; Conditions — hailO by Transtrade</title>
+  <style>
+    :root{--navy:#1D2E4A;--navy-mid:#253a5e;--yellow:#FFD760;--orange:#FF7D4F;--gradient:linear-gradient(135deg,#FFD760 0%,#FF7D4F 100%);--dark:#3a3a3a;--dark-mid:#4d4d4d;--white:#ffffff;--off-white:#F8F9FC;--text:#1a1a2e;--text-muted:#5a6480;--text-light:#8b95b0;--border:rgba(29,46,74,0.1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,'SF Pro Display',BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s}
+    .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;text-decoration:none}
+    .logo-img{height:52px;width:auto;object-fit:contain}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+    .nav-links a{color:var(--text-muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;border-radius:100px;transition:all 0.2s;cursor:pointer}
+    .nav-links a:hover{color:var(--navy);background:var(--off-white)}
+    .nav-cta{background:var(--navy)!important;color:var(--white)!important}
+    .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(29,46,74,0.25)!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all 0.3s}
+    .mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);padding:16px 5%;flex-direction:column;gap:6px;z-index:199}
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{color:var(--text-muted);text-decoration:none;font-size:16px;font-weight:600;padding:12px 16px;border-radius:12px;cursor:pointer;transition:all 0.2s}
+    .mobile-nav a:hover{background:var(--off-white);color:var(--navy)}
+    footer{background:var(--navy);padding:80px 8% 40px}
+    .footer-top{display:flex;flex-direction:row;align-items:flex-start;justify-content:space-between;gap:40px;max-width:1300px;margin:0 auto 60px}
+    .ft-brand{flex:2;min-width:0}
+    .ft-col{flex:1;min-width:0}
+    .ft-brand p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8;font-weight:300;margin:16px 0 24px;max-width:300px}
+    .ft-col h5{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:20px}
+    .ft-col a{display:block;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:12px;cursor:pointer;transition:color 0.2s;font-weight:500}
+    .ft-col a:hover{color:var(--yellow)}
+    .footer-bottom{max-width:1300px;margin:0 auto;padding-top:30px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .footer-bottom p{font-size:13px;color:rgba(255,255,255,0.28);font-weight:400}
+    .footer-bottom p span{color:var(--orange)}
+    .socials{display:flex;gap:8px}
+    .soc-btn{width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;font-size:15px;cursor:pointer;transition:all 0.2s}
+    .soc-btn:hover{background:rgba(255,255,255,0.1)}
+    .logo-pill{background:var(--navy);color:var(--yellow);font-size:17px;font-weight:800;padding:6px 14px;border-radius:100px;letter-spacing:-0.5px;line-height:1;display:flex;align-items:center;gap:2px}
+    .logo-pill .logo-o{color:var(--orange)}
+    .page-wrap{padding-top:68px;min-height:100vh;background:var(--off-white)}
+    .pol-hero{background:var(--navy);padding:80px 8% 70px;position:relative;overflow:hidden}
+    .pol-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 80% 50%,rgba(255,215,96,0.08) 0%,transparent 60%)}
+    .pol-hero-inner{position:relative;z-index:2;max-width:720px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,215,96,0.12);border:1px solid rgba(255,215,96,0.28);border-radius:100px;padding:7px 16px;font-size:11px;font-weight:700;color:var(--yellow);letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
+    .badge-dot{width:6px;height:6px;background:var(--orange);border-radius:50%;display:inline-block}
+    .pol-hero h1{font-size:clamp(34px,5vw,58px);font-weight:800;color:white;letter-spacing:-2px;line-height:1.05;margin-bottom:16px}
+    .pol-hero p{color:rgba(255,255,255,0.55);font-size:16px;font-weight:300}
+    /* Layout with TOC */
+    .layout{display:grid;grid-template-columns:220px 1fr;gap:40px;max-width:1100px;margin:0 auto;padding:60px 5% 100px;align-items:start}
+    .toc{position:sticky;top:90px;background:white;border-radius:16px;border:1px solid var(--border);padding:24px;box-shadow:0 4px 24px rgba(29,46,74,0.05)}
+    .toc h4{font-size:11px;font-weight:700;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+    .toc a{display:block;font-size:13px;color:var(--text-muted);text-decoration:none;padding:7px 10px;border-radius:8px;margin-bottom:2px;font-weight:500;transition:all 0.2s}
+    .toc a:hover{background:var(--off-white);color:var(--navy)}
+    .card{background:white;border-radius:20px;padding:52px;border:1px solid var(--border);box-shadow:0 4px 40px rgba(29,46,74,0.06)}
+    .card h2{font-size:18px;font-weight:800;color:var(--navy);margin:40px 0 12px;padding-left:14px;border-left:3px solid var(--orange);scroll-margin-top:90px}
+    .card h2:first-of-type{margin-top:0}
+    .card h3{font-size:15px;font-weight:700;color:var(--navy);margin:18px 0 8px}
+    .card p{font-size:15px;color:var(--dark-mid);line-height:1.85;margin-bottom:14px}
+    .card ul{padding-left:22px;margin-bottom:16px}
+    .card li{font-size:15px;color:var(--dark-mid);line-height:1.7;margin-bottom:6px}
+    .card a{color:var(--orange);text-decoration:none;font-weight:600}
+    .card a:hover{text-decoration:underline}
+    .card strong{color:var(--navy);font-weight:700}
+    .warn-box{background:rgba(255,125,79,0.08);border:1px solid rgba(255,125,79,0.3);border-radius:14px;padding:22px 26px;margin:16px 0}
+    .warn-box h3{color:#c0340a;margin-top:0;margin-bottom:10px;font-size:14px}
+    .warn-box li{color:#7a2a10;font-size:14px}
+    .note-box{background:rgba(255,215,96,0.15);border:1px solid rgba(255,215,96,0.5);border-radius:12px;padding:18px 22px;margin:16px 0;font-size:14px;color:var(--navy);line-height:1.7}
+    .contact-box{background:var(--off-white);border:1px solid var(--border);border-radius:16px;padding:28px 32px;margin-top:12px;font-size:15px;line-height:2;color:var(--dark-mid)}
+    @media(max-width:1024px){.footer-top{flex-wrap:wrap;gap:40px}.ft-brand{flex:1 1 100%}.ft-col{flex:1 1 calc(25% - 30px);min-width:140px}}
+    @media(max-width:800px){.layout{grid-template-columns:1fr}.toc{display:none}.card{padding:28px 22px}}
+    @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}footer{padding:60px 5% 32px}.footer-top{flex-direction:column;gap:32px}.ft-brand,.ft-col{flex:1 1 100%}.footer-bottom{flex-direction:column;align-items:center;text-align:center;gap:8px}}
+    @media(max-width:600px){.pol-hero{padding:60px 5% 50px}}
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a class="nav-logo" href="index.html"><img src="logo.png" alt="hailO" class="logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">About</a></li>
+    <li><a href="index.html">Services</a></li>
+    <li><a href="index.html">FAQ</a></li>
+    <li><a href="index.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-nav" id="mobNav">
+  <a href="index.html">Home</a><a href="index.html">About</a><a href="index.html">Services</a><a href="index.html">FAQ</a>
+  <a href="index.html" style="color:var(--navy);font-weight:800">Contact Us</a>
+</div>
+
+<div class="page-wrap">
+  <div class="pol-hero">
+    <div class="pol-hero-inner">
+      <div class="badge"><span class="badge-dot"></span> Legal</div>
+      <h1>Customer Terms &amp; Conditions</h1>
+      <p>Terms governing the use of hailO services as a Customer, Consignor, or Sender</p>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="toc">
+      <h4>Contents</h4>
+      <a href="#intro">Introduction</a>
+      <a href="#scope">Scope of Services</a>
+      <a href="#responsibility">Customer Responsibility</a>
+      <a href="#pricing">Pricing &amp; Payment</a>
+      <a href="#load">Load Assistance</a>
+      <a href="#packaging">Packaging &amp; Goods</a>
+      <a href="#prohibited">Prohibited Items</a>
+      <a href="#liability">Liability &amp; Claims</a>
+      <a href="#delivery">Delivery &amp; Delays</a>
+      <a href="#cancellation">Cancellation &amp; Lien</a>
+      <a href="#platform">Platform Disclaimer</a>
+      <a href="#conduct">Driver Conduct</a>
+      <a href="#indemnity">Indemnity</a>
+      <a href="#governing">Governing Law</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="card">
+      <h2 id="intro">1. Introduction</h2>
+      <p>These Terms and Conditions govern the use of services provided by <strong>S V SANGHVI TECNO PRIVATE LIMITED</strong> ("hailO"). By accessing or using hailO's platform, you (<strong>"Customer" / "Consignor" / "Sender"</strong>) agree to be bound by these Terms.</p>
+
+      <h2 id="scope">2. Scope of Services</h2>
+      <p>hailO provides transportation of goods by road, logistics facilitation services, and additional services introduced from time to time. hailO reserves the right to modify, suspend, or discontinue services at its sole discretion.</p>
+      <div class="note-box">🔔 hailO may refuse or cancel bookings, restrict access, or modify services at any time without prior notice.</div>
+
+      <h2 id="responsibility">3. Customer Responsibility</h2>
+      <p>You represent and warrant that you own or are authorized to transport the goods, goods are lawful and compliant with applicable laws, and all details provided are accurate and complete. You agree to indemnify hailO against any claims arising from incorrect information or unlawful goods.</p>
+
+      <h2 id="pricing">4. Pricing &amp; Payment</h2>
+      <p>Charges displayed at booking are indicative; final charges may vary. Payment must be made <strong>directly to the driver partner / shop partner</strong>. hailO is not responsible for payment disputes. Non-payment may result in service suspension or recovery action.</p>
+
+      <h2 id="load">5. Load Assistance</h2>
+      <p>Loading and unloading are <strong>NOT included</strong> in base freight. Must be requested at booking and charged separately. Load Assist includes only basic manual help — excludes packing/unpacking, assembly/disassembly, and technical handling. hailO is not liable for damage or injury during loading/unloading.</p>
+
+      <h2 id="packaging">6. Packaging &amp; Special Category Goods</h2>
+      <p>The Customer is solely responsible for proper packaging of all goods. hailO shall not be liable for any loss or damage arising from improper packaging, nature of goods, or normal transit handling.</p>
+      <div class="warn-box">
+        <h3>⚠️ Perishable &amp; Sensitive Goods — Transported Entirely at Customer's Risk</h3>
+        <ul>
+          <li>Groceries, food items, restaurant or cooked food</li>
+          <li>Ice cream, frozen goods, cold beverages</li>
+          <li>Cakes, bakery products, flowers</li>
+          <li>Pharmaceutical, medical, or temperature-sensitive items</li>
+          <li>Any consumable or perishable goods</li>
+        </ul>
+      </div>
+      <p>hailO shall under no circumstances be responsible for spoilage, melting, leakage, breakage, expiry, or any change in quality — irrespective of cause.</p>
+
+      <h2 id="prohibited">7. Restricted &amp; Prohibited Items</h2>
+      <p>The Customer shall NOT transport:</p>
+      <div class="warn-box">
+        <h3>🚫 Illegal Items</h3>
+        <ul><li>Narcotics, drugs, psychotropic substances</li><li>Smuggled or stolen goods; counterfeit products</li></ul>
+        <h3 style="margin-top:12px">🚫 Hazardous Goods</h3>
+        <ul><li>Explosives, fireworks, flammable liquids, gas cylinders</li><li>Toxic, corrosive, or radioactive materials</li></ul>
+        <h3 style="margin-top:12px">🚫 Weapons &amp; High-Value Items</h3>
+        <ul><li>Firearms, ammunition, restricted weapons</li><li>Cash, currency, jewellery, important documents</li></ul>
+        <h3 style="margin-top:12px">🚫 Others</h3>
+        <ul><li>Animals, human remains, pornographic material, gambling devices</li><li>Alcohol/tobacco where restricted</li></ul>
+      </div>
+      <p>Violation results in full customer liability and possible reporting to authorities.</p>
+
+      <h2 id="liability">8. Liability &amp; Claims</h2>
+      <p>hailO shall only be responsible for loss or damage proven to be caused <strong>solely due to its gross negligence</strong>. Claims must be raised <strong>within 24 hours of delivery</strong> with photos, description, and proof. Late or incomplete claims may be rejected. hailO's decision shall be final and binding.</p>
+
+      <h2 id="delivery">9. Delivery &amp; Delays</h2>
+      <p>All delivery timelines are estimates. hailO is not responsible for delays caused by traffic, weather, government restrictions, operational issues, or force majeure. hailO does not guarantee vehicle availability, timely pickup, condition of goods upon delivery, or continuous service.</p>
+
+      <h2 id="cancellation">10. Cancellation, Non-Payment &amp; Lien</h2>
+      <p>Cancellation after vehicle allocation may attract charges. hailO reserves the right to retain goods for unpaid dues, charge storage fees, and dispose goods if unclaimed. If delivery fails (incorrect address, unavailability, refusal), goods may be returned at additional cost.</p>
+
+      <h2 id="platform">11. Platform Disclaimer</h2>
+      <p>hailO operates strictly as a <strong>technology platform</strong> connecting Customers with independent driver partners and shop partners. hailO does not own vehicles, employ drivers, or guarantee performance by driver partners. hailO shall not be liable for acts, omissions, or negligence of driver partners.</p>
+
+      <h2 id="conduct">12. Driver Conduct Disclaimer</h2>
+      <p>hailO is not responsible for conduct of driver partners, personal disputes between Customer and driver, or informal agreements made outside the platform. Where payment is made directly to the driver, hailO is not responsible for overpayment or fraud.</p>
+
+      <h2 id="indemnity">13. Indemnity</h2>
+      <p>Customer agrees to indemnify and hold harmless hailO against all legal claims, damages, penalties, and losses arising from violation of these Terms, illegal goods, misdeclaration, or non-compliance with laws.</p>
+
+      <h2 id="governing">14. Governing Law &amp; Modifications</h2>
+      <p>Governed by the laws of <strong>India</strong>. Courts at <strong>Kolhapur, Maharashtra</strong> shall have exclusive jurisdiction. hailO reserves the right to update these Terms at any time. Continued use constitutes acceptance of revised Terms.</p>
+
+      <h2 id="contact">15. Contact Details</h2>
+      <div class="contact-box">
+        <strong>S V SANGHVI TECNO PRIVATE LIMITED (hailO)</strong><br>
+        SH NO 1509 C WARD, LAXMIPURI, MUNISUVRAT PLAZA, Kolhapur – 416002<br>
+        📧 <a href="mailto:info@hail.co.in">info@hail.co.in</a><br>
+        ⏰ Monday to Saturday (10 AM – 7 PM)
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="ft-brand">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+        <div class="logo-pill"><img src="whitelogo.png" alt="" height="50px" width="120px"></div>
+        <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.3);letter-spacing:1.5px;text-transform:uppercase">by transtrade</span>
+      </div>
+      <p>Food, medicines, essentials, or parcels — hailO by Transtrade brings everything to your doorstep with care, convenience and complete peace of mind.</p>
+      <div class="socials"><div class="soc-btn">📘</div><div class="soc-btn">📸</div><div class="soc-btn">🐦</div><div class="soc-btn">💼</div></div>
+    </div>
+    <div class="ft-col">
+      <h5>Navigate</h5>
+      <a href="index.html">Home</a><a href="index.html">About Us</a><a href="index.html">Services</a><a href="index.html">FAQ</a><a href="index.html">Contact</a>
+    </div>
+    <div class="ft-col">
+      <h5>Services</h5>
+      <a href="index.html">Food Delivery</a><a href="index.html">Pharmacy Delivery</a><a href="index.html">Parcel Delivery</a><a href="index.html">Groceries</a><a href="index.html">Tempo Delivery</a>
+    </div>
+    <div class="ft-col">
+      <h5>Contact</h5>
+      <a href="mailto:support@hailoapp.com">support@hailoapp.com</a><a href="index.html">Send a Message</a><a href="index.html">Partnership Enquiry</a><a href="index.html">Become a Rider</a>
+    </div>
+    <div class="ft-col">
+      <h5>Policies</h5>
+      <a href="privacy-policy.html">Privacy Policy</a><a href="refund-policy.html">Refund Policy</a><a href="customer-policy.html">Customer Policy</a><a href="service-agreement.html">Service Agreement</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 hailO by Transtrade. All rights reserved. Made with <span>♥</span> and a lot of bike grease.</p>
+    <p>🛵 Currently delivering near you</p>
+  </div>
+</footer>
+
+<script>
+  function toggleMob(){document.getElementById('mobNav').classList.toggle('open')}
+  window.addEventListener('scroll',()=>{document.getElementById('mainNav').style.boxShadow=window.scrollY>10?'0 2px 30px rgba(29,46,74,0.08)':'none'})
+</script>
+</body>
+</html>

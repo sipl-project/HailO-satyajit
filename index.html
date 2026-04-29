@@ -1517,11 +1517,23 @@
     }
 
     .footer-top {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 60px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
       max-width: 1300px;
       margin: 0 auto 60px;
+    }
+
+    .ft-brand {
+      flex: 2;
+      min-width: 0;
+    }
+
+    .ft-col {
+      flex: 1;
+      min-width: 0;
     }
 
     .ft-brand p {
@@ -2256,8 +2268,17 @@
       }
 
       .footer-top {
-        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
         gap: 40px;
+      }
+
+      .ft-brand {
+        flex: 1 1 100%;
+      }
+
+      .ft-col {
+        flex: 1 1 calc(25% - 30px);
+        min-width: 140px;
       }
 
       .services-detail-grid {
@@ -2328,8 +2349,13 @@
       }
 
       .footer-top {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 32px;
+      }
+
+      .ft-brand,
+      .ft-col {
+        flex: 1 1 100%;
       }
 
       .about-stats-mini {
@@ -2490,8 +2516,343 @@
       .btn-primary,
       .btn-outline-light {
         padding: 13px 16px;
-        /* tighter padding on small screens */
         font-size: 13px;
+      }
+    }
+
+    /* ── COMPREHENSIVE RESPONSIVE ── */
+
+    /* Tablet landscape: 1024px */
+    @media (max-width: 1024px) {
+      .section-inner,
+      .section-inner-wide {
+        padding: 0 5%;
+      }
+
+      .hero-left {
+        padding: 60px 5% 60px 6%;
+      }
+
+      .hero-right {
+        padding: 60px 6% 60px 8%;
+      }
+
+      .about-left,
+      .about-right {
+        padding: 60px 6%;
+      }
+
+      .contact-left,
+      .contact-right {
+        padding: 60px 6%;
+      }
+    }
+
+    /* Tablet portrait: 768px */
+    @media (max-width: 768px) {
+      footer {
+        padding: 60px 5% 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+      }
+
+      .hero h1 {
+        font-size: clamp(38px, 9vw, 60px);
+        letter-spacing: -1.5px;
+      }
+
+      .hero-left {
+        padding: 60px 5% 48px;
+        min-height: 60vh;
+      }
+
+      .hero-right {
+        padding: 48px 5% 60px;
+      }
+
+      .hero-float-tag {
+        top: 16px;
+        right: 5%;
+      }
+
+      .hero-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .hero-stat {
+        flex: 0 0 45%;
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+      }
+
+      .hero-btns {
+        flex-wrap: wrap;
+      }
+
+      .btn-primary,
+      .btn-outline-light {
+        flex: 1 1 auto;
+        justify-content: center;
+      }
+
+      .section-pad {
+        padding: 60px 0;
+      }
+
+      .section-label {
+        font-size: 10px;
+      }
+
+      h2.section-title {
+        font-size: clamp(28px, 7vw, 44px);
+      }
+
+      .why-card,
+      .svc-card,
+      .fleet-card,
+      .testi-card {
+        padding: 28px 24px;
+      }
+
+      .contact-left h1 {
+        font-size: clamp(32px, 7vw, 48px);
+      }
+
+      .about-split,
+      .contact-split {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .app-section {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .app-left,
+      .app-right {
+        padding: 48px 5%;
+      }
+
+      .biz-left,
+      .biz-right {
+        padding: 40px 5%;
+      }
+
+      .page-hero {
+        padding: 100px 5% 60px;
+      }
+
+      .page-hero h1 {
+        font-size: clamp(32px, 8vw, 52px);
+      }
+
+      .faq-q {
+        font-size: 15px;
+        padding: 18px 20px;
+      }
+
+      .numbers-section {
+        padding: 40px 5%;
+      }
+
+      .number-block {
+        padding: 24px 20px;
+      }
+
+      .marquee-inner {
+        gap: 32px;
+      }
+
+      .marquee-item {
+        font-size: 13px;
+        padding: 8px 20px;
+      }
+    }
+
+    /* Mobile: 480px */
+    @media (max-width: 480px) {
+      nav {
+        padding: 0 4%;
+      }
+
+      footer {
+        padding: 48px 4% 28px;
+      }
+
+      .ft-brand p {
+        font-size: 13px;
+        max-width: 100%;
+      }
+
+      .socials {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .hero h1 {
+        font-size: clamp(32px, 10vw, 48px);
+        letter-spacing: -1px;
+      }
+
+      .hero-sub {
+        font-size: 14px;
+      }
+
+      .hero-stat-num {
+        font-size: 22px;
+      }
+
+      .hero-stat-label {
+        font-size: 10px;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .btn-primary,
+      .btn-outline-light,
+      .btn-navy,
+      .btn-outline-navy {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 13px;
+      }
+
+      .service-pill {
+        padding: 14px 16px;
+        gap: 12px;
+      }
+
+      .pill-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+
+      .pill-title {
+        font-size: 14px;
+      }
+
+      .pill-sub {
+        font-size: 11px;
+      }
+
+      .hero-float-tag {
+        display: none;
+      }
+
+      .why-card {
+        padding: 24px 20px;
+      }
+
+      .testi-card {
+        padding: 24px 20px;
+      }
+
+      .contact-left {
+        padding: 48px 4%;
+      }
+
+      .contact-right {
+        padding: 32px 4% 48px;
+      }
+
+      .contact-row {
+        gap: 12px;
+      }
+
+      .cr-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+
+      .footer-bottom p {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .faq-q {
+        font-size: 14px;
+        padding: 16px;
+      }
+
+      .section-pad {
+        padding: 48px 0;
+      }
+
+      .page-hero {
+        padding: 88px 4% 48px;
+      }
+
+      .page-hero h1 {
+        font-size: clamp(28px, 9vw, 40px);
+      }
+
+      .number-block {
+        flex: 0 0 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-right: none;
+      }
+
+      .form-row-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .svc-tabs {
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .svc-tab {
+        padding: 8px 16px;
+        font-size: 12px;
+      }
+
+      .about-stats-mini {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .about-stat-mini {
+        padding: 20px 16px;
+      }
+    }
+
+    /* Very small: 360px */
+    @media (max-width: 360px) {
+      .hero h1 {
+        font-size: 28px;
+        letter-spacing: -0.5px;
+      }
+
+      .logo-pill {
+        font-size: 14px;
+        padding: 5px 10px;
+      }
+
+      .logo-sub {
+        display: none;
+      }
+
+      .about-stats-mini {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        gap: 24px;
       }
     }
   </style>
@@ -3105,19 +3466,19 @@
         <h2 class="section-title">Big Jobs.<br><em>No Sweat.</em></h2>
         <p class="section-body">From house shifting to construction runs — the hailO Tempo handles what bikes can't.</p>
         <div class="tempo-grid">
-          <div class="tempo-card">
+          <!-- <div class="tempo-card">
             <div class="tempo-icon">🏠</div>
             <h4>House Shifting</h4>
             <p>Moving homes? Furniture, appliances, boxes. All of it, moved safely.</p>
             <div class="tempo-tag">Full home moves</div>
-          </div>
-          <div class="tempo-card">
+          </div> -->
+          <!-- <div class="tempo-card">
             <div class="tempo-icon">🏢</div>
             <h4>Office Relocation</h4>
             <p>Shifting your workspace without losing your mind (or your monitors). We move offices fast so your team
               gets back to work sooner.</p>
             <div class="tempo-tag">B2B</div>
-          </div>
+          </div> -->
           <div class="tempo-card">
             <div class="tempo-icon">📦</div>
             <h4>Bulk B2B Delivery</h4>
@@ -3138,13 +3499,13 @@
             <p>Cement bags, tiles, pipes, equipment — hailO Tempo is built to carry the stuff that builds stuff.</p>
             <div class="tempo-tag">Scheduled</div>
           </div>
-          <div class="tempo-card">
+          <!-- <div class="tempo-card">
             <div class="tempo-icon">🛒</div>
             <h4>Wholesale & Retail Runs</h4>
             <p>Market pickups, wholesale hauls, multi-stop drops. Whether you're a kirana store or a growing brand, we
               keep your shelves stocked.</p>
             <div class="tempo-tag">B2B</div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -3359,6 +3720,14 @@
         <a onclick="showPage('contact')">Send a Message</a>
         <a onclick="showPage('contact')">Partnership Enquiry</a>
         <a onclick="showPage('contact')">Become a Rider</a>
+      </div>
+      <div class="ft-col">
+        <h5>Policies</h5>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="refund-policy.html">Refund Policy</a>
+        <a onclick="showPage('policies')">Customer Policy</a>
+        <a onclick="showPage('policies')">Service Agreement</a>
+        
       </div>
     </div>
     <div class="footer-bottom">

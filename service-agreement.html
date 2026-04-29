@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Agreement — hailO by Transtrade</title>
+  <style>
+    :root{--navy:#1D2E4A;--navy-mid:#253a5e;--yellow:#FFD760;--orange:#FF7D4F;--gradient:linear-gradient(135deg,#FFD760 0%,#FF7D4F 100%);--dark:#3a3a3a;--dark-mid:#4d4d4d;--white:#ffffff;--off-white:#F8F9FC;--text:#1a1a2e;--text-muted:#5a6480;--text-light:#8b95b0;--border:rgba(29,46,74,0.1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,'SF Pro Display',BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+    /* ── NAV ── */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s}
+    .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;text-decoration:none}
+    .logo-img{height:52px;width:auto;object-fit:contain}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+    .nav-links a{color:var(--text-muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;border-radius:100px;transition:all 0.2s;cursor:pointer}
+    .nav-links a:hover{color:var(--navy);background:var(--off-white)}
+    .nav-cta{background:var(--navy)!important;color:var(--white)!important}
+    .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(29,46,74,0.25)!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all 0.3s}
+    .mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);padding:16px 5%;flex-direction:column;gap:6px;z-index:199}
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{color:var(--text-muted);text-decoration:none;font-size:16px;font-weight:600;padding:12px 16px;border-radius:12px;cursor:pointer;transition:all 0.2s}
+    .mobile-nav a:hover{background:var(--off-white);color:var(--navy)}
+
+    /* ── FOOTER ── */
+    footer{background:var(--navy);padding:80px 8% 40px}
+    .footer-top{display:flex;flex-direction:row;align-items:flex-start;justify-content:space-between;gap:40px;max-width:1300px;margin:0 auto 60px}
+    .ft-brand{flex:2;min-width:0}
+    .ft-col{flex:1;min-width:0}
+    .ft-brand p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8;font-weight:300;margin:16px 0 24px;max-width:300px}
+    .ft-col h5{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:20px}
+    .ft-col a{display:block;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:12px;cursor:pointer;transition:color 0.2s;font-weight:500}
+    .ft-col a:hover{color:var(--yellow)}
+    .footer-bottom{max-width:1300px;margin:0 auto;padding-top:30px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .footer-bottom p{font-size:13px;color:rgba(255,255,255,0.28);font-weight:400}
+    .footer-bottom p span{color:var(--orange)}
+    .socials{display:flex;gap:8px}
+    .soc-btn{width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;font-size:15px;cursor:pointer;transition:all 0.2s}
+    .soc-btn:hover{background:rgba(255,255,255,0.1)}
+    .logo-pill{background:var(--navy);color:var(--yellow);font-size:17px;font-weight:800;padding:6px 14px;border-radius:100px;letter-spacing:-0.5px;line-height:1;display:flex;align-items:center;gap:2px}
+    .logo-pill .logo-o{color:var(--orange)}
+
+    /* ── PAGE ── */
+    .page-wrap{padding-top:68px;min-height:100vh;background:var(--off-white)}
+    .pol-hero{background:var(--navy);padding:80px 8% 70px;position:relative;overflow:hidden}
+    .pol-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 80% 50%,rgba(255,215,96,0.08) 0%,transparent 60%)}
+    .pol-hero-inner{position:relative;z-index:2;max-width:720px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,215,96,0.12);border:1px solid rgba(255,215,96,0.28);border-radius:100px;padding:7px 16px;font-size:11px;font-weight:700;color:var(--yellow);letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
+    .badge-dot{width:6px;height:6px;background:var(--orange);border-radius:50%;display:inline-block}
+    .pol-hero h1{font-size:clamp(34px,5vw,58px);font-weight:800;color:white;letter-spacing:-2px;line-height:1.05;margin-bottom:16px}
+    .pol-hero p{color:rgba(255,255,255,0.55);font-size:16px;font-weight:300}
+
+    /* Party cards */
+    .parties{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1100px;margin:-40px auto 0;padding:0 5%;position:relative;z-index:10}
+    .party-card{background:white;border-radius:16px;padding:28px 30px;border:1px solid var(--border);box-shadow:0 8px 32px rgba(29,46,74,0.1)}
+    .party-card.first{border-top:4px solid var(--orange)}
+    .party-card.second{border-top:4px solid var(--yellow)}
+    .party-label{font-size:11px;font-weight:700;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+    .party-name{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:8px}
+    .party-desc{font-size:13px;color:var(--text-muted);line-height:1.6}
+
+    /* Layout */
+    .layout{display:grid;grid-template-columns:220px 1fr;gap:40px;max-width:1100px;margin:40px auto 0;padding:20px 5% 100px;align-items:start}
+    .toc{position:sticky;top:90px;background:white;border-radius:16px;border:1px solid var(--border);padding:24px;box-shadow:0 4px 24px rgba(29,46,74,0.05)}
+    .toc h4{font-size:11px;font-weight:700;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+    .toc a{display:block;font-size:13px;color:var(--text-muted);text-decoration:none;padding:7px 10px;border-radius:8px;margin-bottom:2px;font-weight:500;transition:all 0.2s}
+    .toc a:hover{background:var(--off-white);color:var(--navy)}
+
+    .card{background:white;border-radius:20px;padding:52px;border:1px solid var(--border);box-shadow:0 4px 40px rgba(29,46,74,0.06)}
+    .card h2{font-size:18px;font-weight:800;color:var(--navy);margin:40px 0 12px;padding-left:14px;border-left:3px solid var(--orange);scroll-margin-top:90px}
+    .card h2:first-of-type{margin-top:0}
+    .card h3{font-size:15px;font-weight:700;color:var(--navy);margin:18px 0 8px}
+    .card p{font-size:15px;color:var(--dark-mid);line-height:1.85;margin-bottom:14px}
+    .card ul{padding-left:22px;margin-bottom:16px}
+    .card li{font-size:15px;color:var(--dark-mid);line-height:1.7;margin-bottom:6px}
+    .card a{color:var(--orange);text-decoration:none;font-weight:600}
+    .card a:hover{text-decoration:underline}
+    .card strong{color:var(--navy);font-weight:700}
+
+    /* Fee cards */
+    .fee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0 24px}
+    .fee-card{background:var(--off-white);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center}
+    .fee-card .fee-icon{font-size:26px;margin-bottom:8px}
+    .fee-card .fee-title{font-size:13px;font-weight:700;color:var(--navy)}
+    .fee-card .fee-desc{font-size:12px;color:var(--text-muted);margin-top:4px}
+
+    /* Checklist */
+    .checklist{list-style:none;padding:0;margin:16px 0 24px}
+    .checklist li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--dark-mid);padding:10px 0;border-bottom:1px solid var(--border)}
+    .checklist li:last-child{border-bottom:none}
+    .checklist li::before{content:'✓';color:white;background:var(--gradient);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;margin-top:1px}
+
+    /* Prohibitions grid */
+    .prohib-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 24px}
+    .prohib-item{display:flex;align-items:flex-start;gap:10px;background:rgba(255,125,79,0.07);border:1px solid rgba(255,125,79,0.2);border-radius:10px;padding:14px 16px}
+    .prohib-item .pi-icon{font-size:18px;flex-shrink:0}
+    .prohib-item .pi-text{font-size:13px;color:#7a2a10;font-weight:600}
+
+    .warn-box{background:rgba(255,125,79,0.08);border:1px solid rgba(255,125,79,0.3);border-radius:14px;padding:20px 24px;margin:16px 0}
+    .warn-box p{color:#7a2a10;font-size:14px;margin:0}
+    .strong-box{background:var(--navy);border-radius:16px;padding:32px 36px;margin:20px 0}
+    .strong-box h3{color:var(--yellow);margin-top:0;margin-bottom:10px;font-size:17px}
+    .strong-box p{color:rgba(255,255,255,0.65);font-size:14px;margin:0;line-height:1.8}
+    .note-box{background:rgba(255,215,96,0.15);border:1px solid rgba(255,215,96,0.5);border-radius:12px;padding:18px 22px;margin:16px 0;font-size:14px;color:var(--navy);line-height:1.7}
+    .contact-box{background:var(--off-white);border:1px solid var(--border);border-radius:16px;padding:28px 32px;margin-top:12px;font-size:15px;line-height:2;color:var(--dark-mid)}
+    .divider{height:1px;background:var(--border);margin:32px 0}
+
+    /* Signature */
+    .sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+    .sig-box{border:2px dashed var(--border);border-radius:14px;padding:28px}
+    .sig-box .sig-label{font-size:12px;font-weight:700;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+    .sig-box .sig-line{border-bottom:1px solid var(--navy);margin-bottom:8px;height:40px}
+    .sig-box .sig-name{font-size:13px;color:var(--text-muted)}
+
+    @media(max-width:1024px){.footer-top{flex-wrap:wrap;gap:40px}.ft-brand{flex:1 1 100%}.ft-col{flex:1 1 calc(25% - 30px);min-width:140px}.parties{grid-template-columns:1fr;margin-top:-20px}}
+    @media(max-width:800px){.layout{grid-template-columns:1fr}.toc{display:none}.card{padding:28px 22px}.fee-grid,.prohib-grid,.sig-grid{grid-template-columns:1fr}}
+    @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}footer{padding:60px 5% 32px}.footer-top{flex-direction:column;gap:32px}.ft-brand,.ft-col{flex:1 1 100%}.footer-bottom{flex-direction:column;align-items:center;text-align:center;gap:8px}}
+    @media(max-width:600px){.pol-hero{padding:60px 5% 50px}}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" href="index.html"><img src="logo.png" alt="hailO" class="logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">About</a></li>
+    <li><a href="index.html">Services</a></li>
+    <li><a href="index.html">FAQ</a></li>
+    <li><a href="index.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-nav" id="mobNav">
+  <a href="index.html">Home</a>
+  <a href="index.html">About</a>
+  <a href="index.html">Services</a>
+  <a href="index.html">FAQ</a>
+  <a href="index.html" style="color:var(--navy);font-weight:800">Contact Us</a>
+</div>
+
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <div class="pol-hero">
+    <div class="pol-hero-inner">
+      <div class="badge"><span class="badge-dot"></span> Legal</div>
+      <h1>Service Agreement</h1>
+      <p>Terms and conditions for Driver Partners &amp; Shop Partners operating on the hailO platform</p>
+    </div>
+  </div>
+
+  <!-- PARTY CARDS -->
+  <div class="parties">
+    <div class="party-card first">
+      <div class="party-label">First Party (Platform)</div>
+      <div class="party-name">S V SANGHVI TECNO PRIVATE LIMITED</div>
+      <div class="party-desc">SH NO 1509 C WARD, LAXMIPURI, MUNISUVRAT PLAZA<br>Kolhapur, Maharashtra – 416002<br>📧 info@hail.co.in</div>
+    </div>
+    <div class="party-card second">
+      <div class="party-label">Second Party (Service Provider)</div>
+      <div class="party-name">Driver Partner / Shop Partner</div>
+      <div class="party-desc">Any independent contractor engaged in providing logistics, delivery, or related services through the hailO platform.</div>
+    </div>
+  </div>
+
+  <!-- LAYOUT -->
+  <div class="layout">
+
+    <!-- TOC -->
+    <div class="toc">
+      <h4>Contents</h4>
+      <a href="#recitals">Recitals</a>
+      <a href="#scope">Scope of Services</a>
+      <a href="#term">Term &amp; Relationship</a>
+      <a href="#access">Platform Access &amp; Fees</a>
+      <a href="#shop">Shop Partner Terms</a>
+      <a href="#obligations">SP Obligations</a>
+      <a href="#payments">Payments</a>
+      <a href="#cash">Cash &amp; Liability</a>
+      <a href="#taxes">Fees &amp; Taxes</a>
+      <a href="#prohibitions">Prohibitions</a>
+      <a href="#indemnity">Liability &amp; Indemnity</a>
+      <a href="#hailo-limit">hailO's Limits</a>
+      <a href="#suspension">Suspension</a>
+      <a href="#dispute">Dispute Resolution</a>
+      <a href="#general">General</a>
+      <a href="#signatures">Signatures</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="card">
+
+      <h2 id="recitals">Recitals</h2>
+      <p>hailO operates a technology platform connecting customers with independent drivers and/or shop partners for logistics, delivery, and related services. The Service Provider is an independent contractor. hailO does not provide transportation or sell goods — it only facilitates connections.</p>
+
+      <h2 id="scope">1. Scope of Services</h2>
+      <p>The Service Provider agrees to:</p>
+      <ul class="checklist">
+        <li>Accept and fulfill service requests through the hailO platform</li>
+        <li>Ensure timely pickup, delivery, or order fulfillment</li>
+        <li>Maintain professional conduct with customers at all times</li>
+        <li>Comply with all platform instructions and policies</li>
+      </ul>
+
+      <h2 id="term">2. Term &amp; Relationship</h2>
+      <p>This Agreement is valid for <strong>1 year</strong>, auto-renewable, and can be terminated anytime by hailO without notice.</p>
+      <div class="note-box">⚖️ The relationship is strictly <strong>principal-to-principal</strong>. There is NO employment, agency, partnership, or joint venture. The Service Provider operates independently and entirely at their own risk.</div>
+
+      <h2 id="access">3. Platform Access &amp; Subscription (Driver Partners)</h2>
+      <p>Driver Partners must pay platform usage / trip access charges / subscription fees with applicable tax to hailO via the payment gateway link provided. Payment <strong>MUST be made prior</strong> to accepting or undertaking trips.</p>
+      <div class="fee-grid">
+        <div class="fee-card"><div class="fee-icon">🚗</div><div class="fee-title">Per Trip</div><div class="fee-desc">Charged per trip accepted</div></div>
+        <div class="fee-card"><div class="fee-icon">📅</div><div class="fee-title">Subscription</div><div class="fee-desc">Weekly / monthly plans</div></div>
+        <div class="fee-card"><div class="fee-icon">👜</div><div class="fee-title">Wallet Deduction</div><div class="fee-desc">Pre-loaded wallet balance</div></div>
+      </div>
+      <div class="warn-box"><p>⚠️ Failure to pay may result in immediate access restriction, trip blocking, or account suspension. hailO has the absolute right to revise charges at any time.</p></div>
+
+      <h2 id="shop">4. Shop Partner (Merchant) Terms</h2>
+      <p>If the Service Provider is a shop/merchant, they are solely responsible for product quality, pricing, packaging, and legal compliance (FSSAI, GST, etc.). hailO does <strong>NOT</strong> manufacture, sell, or store goods and is <strong>NOT</strong> responsible for product defects, expiry, or customer complaints.</p>
+
+      <h2 id="obligations">5. Service Provider Obligations</h2>
+      <ul class="checklist">
+        <li>Provide true and accurate information at all times</li>
+        <li>Maintain all valid licenses, permits, and documents</li>
+        <li>Ensure vehicle (if applicable) is roadworthy and compliant</li>
+        <li>Maintain active smartphone and internet connectivity</li>
+        <li>Not misuse the platform or engage in fraud of any kind</li>
+        <li>Not contact customers outside the platform for personal gain</li>
+      </ul>
+
+      <h2 id="payments">6. Payments &amp; Collection</h2>
+      <p>Customer payments (UPI/cash/online) are directly between the customer and Service Provider. hailO is <strong>NOT</strong> a payment collector, payment intermediary, or responsible for payment disputes. The Service Provider is solely responsible for collecting correct amounts, issuing receipts, and handling disputes. Overcharging or fraud results in immediate termination and recovery of dues.</p>
+
+      <h2 id="cash">7. Cash &amp; Transaction Liability</h2>
+      <p>All transactions are independent transactions of the Service Provider. hailO has <strong>zero liability</strong> for payment failures, cash shortages, customer refusal to pay, or fraud by customer or Service Provider.</p>
+
+      <h2 id="taxes">8. Fees, Taxes &amp; Deductions</h2>
+      <p>Platform fees/commissions may apply. TDS/GST is applicable as per law. The Service Provider is fully responsible for filing taxes and compliance with GST and income tax laws.</p>
+
+      <h2 id="prohibitions">9. Strict Prohibitions</h2>
+      <p>Immediate suspension or termination will result from:</p>
+      <div class="prohib-grid">
+        <div class="prohib-item"><span class="pi-icon">🚫</span><span class="pi-text">Fraud / fake orders</span></div>
+        <div class="prohib-item"><span class="pi-icon">🚫</span><span class="pi-text">Misbehavior with customers</span></div>
+        <div class="prohib-item"><span class="pi-icon">🚫</span><span class="pi-text">Theft / tampering with goods</span></div>
+        <div class="prohib-item"><span class="pi-icon">🚫</span><span class="pi-text">Use of fake documents</span></div>
+        <div class="prohib-item"><span class="pi-icon">🚫</span><span class="pi-text">Operating multiple accounts</span></div>
+        <div class="prohib-item"><span class="pi-icon">🚫</span><span class="pi-text">Working under influence of alcohol/drugs</span></div>
+        <div class="prohib-item"><span class="pi-icon">🚫</span><span class="pi-text">Any illegal activity</span></div>
+      </div>
+
+      <h2 id="indemnity">10. Liability &amp; Indemnity</h2>
+      <p>The Service Provider is <strong>fully and solely responsible</strong> for accidents, injury or death, loss or theft of goods, legal violations, vehicle-related issues, and all customer claims.</p>
+      <div class="strong-box">
+        <h3>⚖️ Full Indemnification</h3>
+        <p>The Service Provider shall indemnify, defend, and hold harmless hailO from all claims, losses, legal proceedings, damages, penalties, and third-party actions — without limitation. This obligation survives termination of this Agreement.</p>
+      </div>
+
+      <h2 id="hailo-limit">11. No Liability of hailO</h2>
+      <p>hailO shall NOT be liable for any loss of income, platform downtime, customer disputes, delivery delays, loss or damage of goods, or any indirect or consequential damages. hailO has <strong>ZERO liability</strong> arising from services performed by the Service Provider.</p>
+
+      <div class="divider"></div>
+
+      <h2 id="suspension">12. Suspension &amp; Termination</h2>
+      <p>hailO can suspend accounts instantly, block payments, recover dues, and take legal action. <strong>No prior notice is required</strong> for suspension or termination under any circumstance.</p>
+
+      <h2 id="dispute">13. Dispute Resolution</h2>
+      <ul>
+        <li><strong>Governing Law:</strong> India</li>
+        <li><strong>Jurisdiction:</strong> Kolhapur, Maharashtra</li>
+        <li><strong>Method:</strong> Arbitration by a sole arbitrator</li>
+      </ul>
+
+      <h2 id="general">14. General Provisions</h2>
+      <p><strong>Electronic Acceptance:</strong> Digital acceptance of this Agreement is legally binding and valid under the IT Act, 2000.</p>
+      <p><strong>Modifications:</strong> hailO can change terms at any time. Continued use of the platform constitutes acceptance of revised terms.</p>
+      <p><strong>Severability:</strong> If any clause is found invalid, the remaining clauses remain valid and enforceable. All rights are reserved by hailO.</p>
+
+      <h2 id="signatures">15. Declaration &amp; Signatures</h2>
+      <p>The Service Provider confirms that all information provided is true, they understand all risks involved, they accept full liability, and they agree to all terms of this Agreement.</p>
+      <div class="sig-grid">
+        <div class="sig-box">
+          <div class="sig-label">For S V SANGHVI TECNO PRIVATE LIMITED</div>
+          <div class="sig-line"></div>
+          <div class="sig-name">Authorized Signatory</div>
+        </div>
+        <div class="sig-box">
+          <div class="sig-label">For Service Provider</div>
+          <div class="sig-line"></div>
+          <div class="sig-name">Name: _____________________<br>Date: _____________________</div>
+        </div>
+      </div>
+
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <strong>S V SANGHVI TECNO PRIVATE LIMITED (hailO)</strong><br>
+        SH NO 1509 C WARD, LAXMIPURI, MUNISUVRAT PLAZA<br>
+        Kolhapur, Maharashtra – 416002<br>
+        📧 <a href="mailto:info@hail.co.in">info@hail.co.in</a><br>
+        ⏰ Monday to Saturday (10 AM – 7 PM)
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="ft-brand">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+        <div class="logo-pill"><img src="whitelogo.png" alt="" height="50px" width="120px"></div>
+        <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.3);letter-spacing:1.5px;text-transform:uppercase">by transtrade</span>
+      </div>
+      <p>Food, medicines, essentials, or parcels — hailO by Transtrade brings everything to your doorstep with care, convenience and complete peace of mind.</p>
+      <div class="socials">
+        <div class="soc-btn">📘</div><div class="soc-btn">📸</div><div class="soc-btn">🐦</div><div class="soc-btn">💼</div>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h5>Navigate</h5>
+      <a href="index.html">Home</a>
+      <a href="index.html">About Us</a>
+      <a href="index.html">Services</a>
+      <a href="index.html">FAQ</a>
+      <a href="index.html">Contact</a>
+    </div>
+    <div class="ft-col">
+      <h5>Services</h5>
+      <a href="index.html">Food Delivery</a>
+      <a href="index.html">Pharmacy Delivery</a>
+      <a href="index.html">Parcel Delivery</a>
+      <a href="index.html">Groceries</a>
+      <a href="index.html">Tempo Delivery</a>
+    </div>
+    <div class="ft-col">
+      <h5>Contact</h5>
+      <a href="mailto:support@hailoapp.com">support@hailoapp.com</a>
+      <a href="index.html">Send a Message</a>
+      <a href="index.html">Partnership Enquiry</a>
+      <a href="index.html">Become a Rider</a>
+    </div>
+    <div class="ft-col">
+      <h5>Policies</h5>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="refund-policy.html">Refund Policy</a>
+      <a href="customer-policy.html">Customer Policy</a>
+      <a href="service-agreement.html">Service Agreement</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 hailO by Transtrade. All rights reserved. Made with <span>♥</span> and a lot of bike grease.</p>
+    <p>🛵 Currently delivering near you</p>
+  </div>
+</footer>
+
+<script>
+  function toggleMob(){document.getElementById('mobNav').classList.toggle('open')}
+  window.addEventListener('scroll',()=>{
+    document.getElementById('mainNav').style.boxShadow = window.scrollY > 10 ? '0 2px 30px rgba(29,46,74,0.08)' : 'none'
+  })
+</script>
+</body>
+</html>
